@@ -44,6 +44,26 @@ flutter:
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
+  assets:
+    - images/board1.png
+    - images/board2.png
+    - images/board3.png
+    - images/board4.png
+    - images/plate/advisor_b.png
+    - images/plate/advisor_w.png
+    - images/plate/cannon_b.png
+    - images/plate/cannon_w.png
+    - images/plate/elephant_b.png
+    - images/plate/elephant_w.png
+    - images/plate/horse_b.png
+    - images/plate/horse_w.png
+    - images/plate/king_b.png
+    - images/plate/king_w.png
+    - images/plate/pawn_b.png
+    - images/plate/pawn_w.png
+    - images/plate/rook_b.png
+    - images/plate/rook_w.png
+    - images/plate/back.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
