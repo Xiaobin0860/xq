@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/stuartmorgan/src/embedder-opensource/flutter-desktop-embedding/example/macos/Runner.xcodeproj">
+      location = "self:/Users/stuartmorgan/src/embedder-opensource/flutter-desktop-embedding/xl/macos/Runner.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,4 +1,4 @@
-package com.example.bella
+package com.xl.bella
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
