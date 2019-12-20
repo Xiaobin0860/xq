@@ -15,13 +15,19 @@ class _BoardState extends State<Board> {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        // Container(
-        //   height: widget.size,
+        Container(
+          height: widget.size,
+          width: widget.size,
+          child: Image.asset(
+            'images/board.jpg',
+          ),
+          color: Colors.blue,
+        ),
+        // Image.asset(
+        //   'images/board.jpg',
         //   width: widget.size,
-        //   child: _getBoardImage(),
-        //   color: Colors.blue,
+        //   height: widget.size,
         // ),
-        _getBoardImage(),
         //Overlaying draggables/ dragTargets onto the squares
         Container(
           height: widget.size,
@@ -31,63 +37,63 @@ class _BoardState extends State<Board> {
             Row(children: <Widget>[
               Expanded(
                 child: Image.asset(
-                  'images/plate/rook_b.png',
+                  'images/plate/rook_b.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/horse_b.png',
+                  'images/plate/horse_b.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/elephant_b.png',
+                  'images/plate/elephant_b.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/advisor_b.png',
+                  'images/plate/advisor_b.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/king_b.png',
+                  'images/plate/king_b.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/advisor_b.png',
+                  'images/plate/advisor_b.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/elephant_b.png',
+                  'images/plate/elephant_b.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/pawn_b.png',
+                  'images/plate/pawn_b.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/cannon_b.png',
+                  'images/plate/cannon_b.gif',
                   width: 60,
                   height: 60,
                 ),
@@ -96,63 +102,63 @@ class _BoardState extends State<Board> {
             Row(children: <Widget>[
               Expanded(
                 child: Image.asset(
-                  'images/plate/rook_b.png',
+                  'images/plate/rook_w.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/horse_b.png',
+                  'images/plate/horse_w.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/elephant_b.png',
+                  'images/plate/elephant_w.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/advisor_b.png',
+                  'images/plate/advisor_w.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/king_b.png',
+                  'images/plate/king_w.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/advisor_b.png',
+                  'images/plate/advisor_w.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/elephant_b.png',
+                  'images/plate/elephant_w.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/pawn_b.png',
+                  'images/plate/pawn_w.gif',
                   width: 60,
                   height: 60,
                 ),
               ),
               Expanded(
                 child: Image.asset(
-                  'images/plate/cannon_b.png',
+                  'images/plate/cannon_w.gif',
                   width: 60,
                   height: 60,
                 ),
@@ -162,10 +168,5 @@ class _BoardState extends State<Board> {
         ),
       ],
     );
-  }
-
-  /// Returns the board image
-  Image _getBoardImage() {
-    return Image.asset('images/board1.png');
   }
 }

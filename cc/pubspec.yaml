@@ -45,6 +45,21 @@ flutter:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
   assets:
+    - images/board.jpg
+    - images/plate/advisor_b.gif
+    - images/plate/advisor_w.gif
+    - images/plate/cannon_b.gif
+    - images/plate/cannon_w.gif
+    - images/plate/elephant_b.gif
+    - images/plate/elephant_w.gif
+    - images/plate/horse_b.gif
+    - images/plate/horse_w.gif
+    - images/plate/king_b.gif
+    - images/plate/king_w.gif
+    - images/plate/pawn_b.gif
+    - images/plate/pawn_w.gif
+    - images/plate/rook_b.gif
+    - images/plate/rook_w.gif
     - images/board1.png
     - images/board2.png
     - images/board3.png
