@@ -35,20 +35,11 @@ class _HomePageState extends State<HomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Row(
+        child: Column(
           children: [
-            Expanded(
-              child: Container(
-                color: Colors.yellow,
-              ),
-            ),
             Board(
-              size: 665,
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.green,
-              ),
+              width: 665,
+              height: 737,
             ),
           ],
         ),

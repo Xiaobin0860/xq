@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'board_rank.dart';
 
 class Board extends StatefulWidget {
-  Board({Key key, this.size}) : super(key: key);
+  Board({Key key, this.width, this.height}) : super(key: key);
 
   /// Size of chessboard
-  final double size;
+  final double width;
+  final double height;
 
   @override
   _BoardState createState() => _BoardState();
@@ -13,160 +15,60 @@ class Board extends StatefulWidget {
 class _BoardState extends State<Board> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Container(
-          height: widget.size,
-          width: widget.size,
-          child: Image.asset(
-            'images/board.jpg',
+    return Container(
+      height: widget.height,
+      width: widget.width,
+      child: Stack(
+        children: <Widget>[
+          Container(
+            height: widget.height,
+            width: widget.width,
+            child: Image.asset(
+              'images/board.jpg',
+              fit: BoxFit.cover,
+            ),
           ),
-          color: Colors.blue,
-        ),
-        // Image.asset(
-        //   'images/board.jpg',
-        //   width: widget.size,
-        //   height: widget.size,
-        // ),
-        //Overlaying draggables/ dragTargets onto the squares
-        Container(
-          height: widget.size,
-          width: widget.size,
-          color: Color.fromARGB(80, 255, 0, 0),
-          child: Column(children: [
-            Row(children: <Widget>[
-              Expanded(
-                child: Image.asset(
-                  'images/plate/rook_b.gif',
-                  width: 60,
-                  height: 60,
+          //Overlaying draggables/ dragTargets onto the squares
+          Center(
+            child: Container(
+              height: widget.height,
+              width: widget.width,
+              child: Column(children: [
+                BoardRank(
+                  children: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
                 ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/horse_b.gif',
-                  width: 60,
-                  height: 60,
+                BoardRank(
+                  children: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
                 ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/elephant_b.gif',
-                  width: 60,
-                  height: 60,
+                BoardRank(
+                  children: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
                 ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/advisor_b.gif',
-                  width: 60,
-                  height: 60,
+                BoardRank(
+                  children: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
                 ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/king_b.gif',
-                  width: 60,
-                  height: 60,
+                BoardRank(
+                  children: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
                 ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/advisor_b.gif',
-                  width: 60,
-                  height: 60,
+                BoardRank(
+                  children: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
                 ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/elephant_b.gif',
-                  width: 60,
-                  height: 60,
+                BoardRank(
+                  children: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
                 ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/pawn_b.gif',
-                  width: 60,
-                  height: 60,
+                BoardRank(
+                  children: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
                 ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/cannon_b.gif',
-                  width: 60,
-                  height: 60,
+                BoardRank(
+                  children: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
                 ),
-              ),
-            ]),
-            Row(children: <Widget>[
-              Expanded(
-                child: Image.asset(
-                  'images/plate/rook_w.gif',
-                  width: 60,
-                  height: 60,
+                BoardRank(
+                  children: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
                 ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/horse_w.gif',
-                  width: 60,
-                  height: 60,
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/elephant_w.gif',
-                  width: 60,
-                  height: 60,
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/advisor_w.gif',
-                  width: 60,
-                  height: 60,
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/king_w.gif',
-                  width: 60,
-                  height: 60,
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/advisor_w.gif',
-                  width: 60,
-                  height: 60,
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/elephant_w.gif',
-                  width: 60,
-                  height: 60,
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/pawn_w.gif',
-                  width: 60,
-                  height: 60,
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'images/plate/cannon_w.gif',
-                  width: 60,
-                  height: 60,
-                ),
-              ),
-            ]),
-          ]),
-        ),
-      ],
+              ]),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
