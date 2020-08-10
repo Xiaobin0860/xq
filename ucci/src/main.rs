@@ -2,6 +2,7 @@ use std::io;
 use std::io::BufRead;
 
 mod ucci;
+mod uci;
 
 fn main() -> io::Result<()> {
     let opt = ucci::Opt {
@@ -10,6 +11,9 @@ fn main() -> io::Result<()> {
         v: String::from("v"),
         d: "",
     };
+    println!("{}", opt);
+
+    let opt = uci::Opt::string("<empty>", None);
     println!("{}", opt);
 
     loop {
