@@ -15,6 +15,12 @@ fn main() -> io::Result<()> {
 
     let opt = uci::Opt::string("<empty>", None);
     println!("{}", opt);
+    let opt = uci::Opt::combo(
+        "uci",
+        Some(vec!["uci", "usi", "ucci", "xboard"]),
+        std::option::Option::None,
+    );
+    println!("{}", opt);
 
     loop {
         let mut buffer = String::new();
