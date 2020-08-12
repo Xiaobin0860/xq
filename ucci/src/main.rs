@@ -4,6 +4,10 @@ use std::io::BufRead;
 mod ucci;
 mod uci;
 
+fn on_threads(o: &uci::Opt) {
+    println!("on_threads: o={}", o);
+}
+
 fn main() -> io::Result<()> {
     let opt = ucci::Opt {
         n: "bookfiles",
@@ -20,6 +24,12 @@ fn main() -> io::Result<()> {
         Some(vec!["uci", "usi", "ucci", "xboard"]),
         std::option::Option::None,
     );
+    println!("{}", opt);
+    let opt = uci::Opt::spin(1f64, 1i32, 512i32, Some(on_threads));
+    println!("{}", opt);
+    let opt = uci::Opt::check(true, None);
+    println!("{}", opt);
+    let opt = uci::Opt::button(None);
     println!("{}", opt);
 
     loop {
